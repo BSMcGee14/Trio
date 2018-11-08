@@ -2,6 +2,7 @@
 using namespace std;
 
 // <-- ADD YOUR FUNCTION PROTOTYPE HERE
+void swap(int &red, int &green, int &blue);
 
 int main()
 {
@@ -13,6 +14,7 @@ int main()
 
 
   // <-- ADD YOUR FUNCTION CALL HERE
+  swap(red, green, blue);
 
 
   //DO NOT CHANGE WITHIN THIS AREA...
@@ -23,3 +25,26 @@ int main()
 }
 
 // <-- ADD YOUR FUNCTION DEFINITON HERE
+void swap(int &red, int  &green, int &blue)
+{
+    int temp;
+
+    if(red < blue)
+    {
+        temp = blue;
+        blue = red;
+        red = temp;
+    }
+    if(green < blue)
+    {
+        temp = blue;
+        blue = green;
+        green = temp;
+    }
+    if(red < green)
+    {
+        temp = green;
+        green = red;
+        red = temp;
+    }
+}
